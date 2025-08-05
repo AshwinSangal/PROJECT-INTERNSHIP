@@ -12,7 +12,7 @@ const Cart = () => {
 
     const fetchCartItems = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/cart')
+            const response = await axios.get('https://project-internship-backends.onrender.com/cart')
             setCartItems(response.data)
             setLoading(false)
         } catch (error) {
@@ -23,7 +23,7 @@ const Cart = () => {
 
     const removeFromCart = async (cartItemId) => {
         try {
-            await axios.delete(`http://localhost:3000/cart/${cartItemId}`)
+            await axios.delete(`https://project-internship-backends.onrender.com/cart/${cartItemId}`)
             fetchCartItems() // Refresh cart items
             alert('Item removed from cart!')
         } catch (error) {
