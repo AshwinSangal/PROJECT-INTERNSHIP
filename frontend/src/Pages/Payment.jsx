@@ -30,7 +30,7 @@ const Payment = () => {
 
     const fetchProduct = async (productId) => {
         try {
-            const response = await axios.get(`https://project-internship-backends.onrender.com/products/${productId}`)
+            const response = await axios.get(`http://localhost:3000/products/${productId}`)
             setProduct(response.data.product || response.data)
             setLoading(false)
         } catch (error) {
