@@ -13,7 +13,7 @@ const UserHome = () => {
 
   const getData = async () => {
     await axios
-      .get("http://localhost:3000/")
+      .get("https://project-internship-backends.onrender.com")
       .then((res) => {
         console.log(res.data.products);
         setProductData(res.data.products);
