@@ -12,7 +12,7 @@ const ProductDetail = () => {
     }, [])
     
     const getProductDetail = async()=>{
-       await axios.get("http://localhost:3000/products/"+productId)
+       await axios.get("https://project-internship-backends.onrender.com/products/"+productId)
         .then((res)=>{
             console.log(res);
             setProduct(res.data)
@@ -24,7 +24,7 @@ const ProductDetail = () => {
 
     const handleAddToCart = async () => {
         try {
-            await axios.post(`http://localhost:3000/cart/add/${productId}`)
+            await axios.post(`https://project-internship-backends.onrender.com/cart/add/${productId}`)
             alert("Product added to cart!")
         } catch (error) {
             console.log(error)
